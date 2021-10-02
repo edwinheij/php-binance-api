@@ -11,14 +11,7 @@
  * ============================================================
  * A curl HTTP REST wrapper for the binance currency exchange
  */
-namespace Binance;
-
-// PHP version check
-if (version_compare(phpversion(), '7.0', '<=')) {
-    fwrite(STDERR, "Hi, PHP " . phpversion() . " support will be removed very soon as part of continued development.\n");
-    fwrite(STDERR, "Please consider upgrading.\n");
-}
-
+namespace Jaggedsoft\Binance;
 /**
  * Wrapper/Decorator for the binance api, providing rate limiting
  *

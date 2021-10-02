@@ -10,15 +10,9 @@
  * ============================================================
  * A curl HTTP REST wrapper for the binance currency exchange
  */
-namespace Binance;
+namespace Jaggedsoft\Binance;
 
 use Exception;
-
-// PHP version check
-if (version_compare(phpversion(), '7.0', '<=')) {
-    fwrite(STDERR, "Hi, PHP " . phpversion() . " support will be removed very soon as part of continued development.\n");
-    fwrite(STDERR, "Please consider upgrading.\n");
-}
 
 /**
  * Main Binance class
@@ -27,7 +21,7 @@ if (version_compare(phpversion(), '7.0', '<=')) {
  * require 'vendor/autoload.php';
  * $api = new Binance\\API();
  */
-class API
+class Api
 {
     protected $base = 'https://api.binance.com/api/'; // /< REST endpoint for the currency exchange
     protected $baseTestnet = 'https://testnet.binance.vision/api/'; // /< Testnet REST endpoint for the currency exchange

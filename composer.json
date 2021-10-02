@@ -24,12 +24,15 @@
         "minimum-stability": "stable"
     },
     "autoload": {
-        "classmap": [
-          "src/php-binance-api.php",
-          "src/php-binance-api-rate-limiter.php"
-        ],
         "psr-4": {
-            "BinanceApi\\": "src/"
+            "Jaggedsoft\\Binance\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jaggedsoft\\Binance\\BinanceServiceProvider"
+            ]
         }
     }
 }
