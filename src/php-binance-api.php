@@ -73,8 +73,6 @@ class API
      * 1 argument - file to load config from
      * 2 arguments - api key and api secret
      * 3 arguments - api key, api secret and use testnet flag
-     *
-     * @return null
      */
     public function __construct()
     {
@@ -122,7 +120,7 @@ class API
      * magic set for protected and protected members
      *
      * @param $member string the name of the member property
-     * @param $value the value of the member property
+     * @param $value mixed the value of the member property
      */
     public function __set(string $member, $value)
     {
@@ -135,7 +133,6 @@ class API
      * ~/jaggedsoft/php-binance-api.json
      *
      * @param $file string file location
-     * @return null
      */
     protected function setupApiConfigFromFile(string $file = null)
     {
@@ -161,7 +158,6 @@ class API
      * ~/jaggedsoft/php-binance-api.json
      *
      * @param $file string file location
-     * @return null
      */
     protected function setupCurlOptsFromFile(string $file = null)
     {
@@ -183,8 +179,6 @@ class API
      * If no paramaters are supplied in the constructor for the proxy confguration,
      * this function will attempt to load the proxy info from the users home directory
      * ~/jaggedsoft/php-binance-api.json
-     *
-     * @return null
      */
     protected function setupProxyConfigFromFile(string $file = null)
     {
@@ -607,7 +601,6 @@ class API
      *
      * $api->useServerTime();
      *
-     * @return null
      * @throws \Exception
      */
     public function useServerTime()
@@ -733,8 +726,8 @@ class API
      * 
      * @property int $weight 1
      * 
-     * @param long  $startTime  (optional)  Start time, e.g. 1617580799000
-     * @param long  $endTime    (optional)  End time, e.g. 1617580799000. Endtime is mandatory if startTime is set.
+     * @param $startTime integer (optional)  Start time, e.g. 1617580799000
+     * @param $endTime integer   (optional)  End time, e.g. 1617580799000. Endtime is mandatory if startTime is set.
      * 
      * @return array containing the response
      * @throws \Exception
@@ -1232,8 +1225,6 @@ class API
      * ];
      *
      * $api->setProxy( $proxyconf );
-     *
-     * @return null
      */
     public function setProxy(array $proxyconf)
     {
@@ -2034,9 +2025,9 @@ class API
 
     /**
      * roundStep rounds quantity with stepSize
-     * @param $qty quantity
-     * @param $stepSize parameter from exchangeInfo
-     * @return rounded value. example: roundStep(1.2345, 0.1) = 1.2
+     * @param $qty integer quantity
+     * @param $stepSize float parameter from exchangeInfo
+     * @return float rounded value. example: roundStep(1.2345, 0.1) = 1.2
      *
      */
     public function roundStep($qty, $stepSize = 0.1)
@@ -2825,12 +2816,12 @@ class API
 
     public function getXMbxUsedWeight() : int
     {
-        $this->xMbxUsedWeight;
+        return $this->xMbxUsedWeight;
     }
 
     public function getXMbxUsedWeight1m() : int
     {
-        $this->xMbxUsedWeight1m;
+        return $this->xMbxUsedWeight1m;
     }
 
     private function getRestEndpoint() : string

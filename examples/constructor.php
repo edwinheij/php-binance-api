@@ -1,6 +1,6 @@
 <?php
 
-require '../php-binance-api.php';
+require '../vendor/autoload.php';
 
 $api_key = "z5RQZ9n8JcS3HLDQmPpfLQIGGQN6TTs5pCP5CTnn4nYk2ImFcew49v4ZrmP3MGl5";
 $api_secret = "ZqePF1DcLb6Oa0CfcLWH0Tva59y8qBBIqu789JEY27jq0RkOKXpNl9992By1PN9Z";

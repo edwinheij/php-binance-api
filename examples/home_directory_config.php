@@ -1,6 +1,6 @@
 <?php
 
-require '../php-binance-api.php';
+require '../vendor/autoload.php';
 
 /*
 mkdir -vp ~/.config/jaggedsoft/
