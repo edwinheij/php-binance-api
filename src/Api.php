@@ -984,7 +984,7 @@ class Api
      *
      * $price = $api->price( "ETHBTC" );
      *
-     * @return array with error message or array with symbol price
+     * @return string|array  array with error message or string with symbol price
      * @throws \Exception
      */
     public function price(string $symbol)
@@ -1127,7 +1127,7 @@ class Api
      *
      * $balances = $api->balances($ticker);
      *
-     * @param bool $priceData array of the symbols balances are required for
+     * @param bool|array $priceData array of the symbols balances are required for
      * @return array with error message or array of balances
      * @throws \Exception
      */
